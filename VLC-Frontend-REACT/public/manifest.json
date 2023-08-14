@@ -1,0 +1,66 @@
+{
+  "manifest_version": 2,
+  "name": "COURAGE Companion",
+  "version": "0.2",
+  "web_accessible_resources": ["index.html", "logo.png"],
+  "description": "Get pages source from a popup COURAGE",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>",
+        "http://localhost/*",
+        "http://pfrias.couragecompanion.eu/*",
+        "https://pfrias.couragecompanion.eu/*",
+        "https://pixelfed.pa.itd.cnr.it/*",
+        "http://www.pixelfed.de/*",
+        "https://pixelfed.de/*",
+        "http://127.0.0.1:5000/*",
+        "https://swipeit.couragecompanion.eu/",
+        "http://testshop.314159265358979323846264338327950288419716939937510582097494459.de/wp-content/uploads/2020/05/Sample.json"
+      ],
+      "js": ["pixelfed_content.js", "jquery-3.5.1.min.js", "content.js"]
+    },
+    {
+      "matches": [
+        "https://swipeit.couragecompanion.eu/",
+        "http://www.instagram.com/*",
+        "https://www.instagram.com/*",
+        "http://pfrias.couragecompanion.eu/*",
+        "https://pfrias.couragecompanion.eu/*",
+        "https://pixelfed.pa.itd.cnr.it/*",
+        "http://www.pixelfed.de/*",
+        "https://pixelfed.de/*",
+        "http://127.0.0.1:5000/*",
+        "http://testshop.314159265358979323846264338327950288419716939937510582097494459.de/wp-content/uploads/2020/05/Sample.json"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["http://www.instagram.com/*", "https://www.instagram.com/*"],
+      "js": ["instagram_content.js", "jquery-3.5.1.min.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Test Courage Extension",
+    "default_icon": "BOT.png"
+  },
+  "background": {
+    "scripts": ["background.js", "pixelfed.js"]
+  },
+  "content_security_policy": "script-src 'self' 'sha256-FRoFlGx2+Fhv0tPS9pYdsPweLbLLjRfa4Ap2BYiXk2E='; object-src 'self'",
+  "permissions": [
+    "tabs",
+    "http://localhost/*",
+    "<all_urls>",
+    "contextMenus",
+    "activeTab",
+    "storage",
+    "management"
+  ],
+  "icons": {
+    "16": "logo192.png",
+    "128": "logo.png"
+  }
+}

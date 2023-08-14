@@ -1,0 +1,37 @@
+/* 0 - 599 */
+.start {
+  height: 20vh;
+}
+/* 600 - 999 */
+@media screen and (min-width: 600px) {
+  .start {
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .start {
+    height: 80vh;
+  }
+}
+
+/* module.exports = {
+  theme: {
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    }
+  }
+} */

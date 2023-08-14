@@ -1,0 +1,37 @@
+button1 {
+  border-radius: 50%;
+  padding: 0.5em;
+  width: 40px;
+  height: 40px;
+  margin-top: 30px;
+  border: 2px solid black;
+  color: black;
+  position: relative;
+}
+button1:hover {
+  border: 2px solid black;
+  background-color: gray;
+  color: #ffffff;
+}
+button1::before {
+  content: ' ';
+  position: absolute;
+  display: block;
+  background-color: black;
+  width: 2px;
+  left: 12px;
+  top: 5px;
+  bottom: 5px;
+  transform: rotate(45deg);
+}
+button1::after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  background-color: black;
+  height: 2px;
+  top: 12px;
+  left: 5px;
+  right: 5px;
+  transform: rotate(45deg);
+}

@@ -1,0 +1,52 @@
+{
+  "name": "react-extension",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "custom-env": "^2.0.1",
+    "dotenv": "^8.2.0",
+    "highcharts": "^9.0.1",
+    "highcharts-react-official": "^3.0.0",
+    "lodash": "^4.17.21",
+    "prettier": "^2.0.5",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-player": "^2.9.0",
+    "react-scripts": "^4.0.2",
+    "react-simple-chatbot": "^0.6.1",
+    "react-tiny-link": "^3.6.1",
+    "styled-components": "^5.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "dev": "nodemon react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "devDependencies": {
+    "start-server-and-test": "^1.14.0"
+  }
+}

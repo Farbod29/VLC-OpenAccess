@@ -1,0 +1,267 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Swagger for swipeit",
+    "version": "1.0.0",
+    "title": "Swipeit Swagger",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "localhost:3001",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/album/duplicate": {
+      "post": {
+        "tags": ["album"],
+        "summary": "duplicate album",
+        "description": "copy image of all album into another album",
+        "operationId": "duplicateAlbum",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "source-album",
+            "in": "header",
+            "description": "source album to copy from",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "destination-album",
+            "in": "header",
+            "description": "destination album to copy",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/album": {
+      "get": {
+        "tags": ["album"],
+        "summary": "get all image of album",
+        "description": "get image of album",
+        "operationId": "getAlbum",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "album",
+            "in": "header",
+            "description": "album to get all image",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiResponseImage"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["album"],
+        "summary": "delete all image of album",
+        "description": "delete image of  album",
+        "operationId": "deleteAlbum",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "album",
+            "in": "header",
+            "description": "album to get all image",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": ["user"],
+        "summary": "login user and generate token",
+        "description": "check the user and perform login operation and generate jwt token",
+        "operationId": "userLogin",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "body",
+            "description": "username to login",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiResponseLogin"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/users/getUserProfile": {
+      "post": {
+        "tags": ["user"],
+        "summary": "get user profile",
+        "description": "get the user profile",
+        "operationId": "userProfile",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "student_id",
+            "in": "body",
+            "description": "student_id for profile",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiResponseLogin"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Image": {
+      "type": "object",
+      "properties": {
+        "expert_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "image": {
+          "type": "string"
+        },
+        "image_id": {
+          "type": "string"
+        },
+        "album_name": {
+          "type": "string"
+        },
+        "image_name": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "student_tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/student_tags"
+          }
+        },
+        "variance": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "Pi": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "student_tags": {
+      "type": "object",
+      "properties": {
+        "student_id": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        }
+      }
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "ApiResponseImage": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Image"
+          }
+        }
+      }
+    },
+    "ApiResponseLogin": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
