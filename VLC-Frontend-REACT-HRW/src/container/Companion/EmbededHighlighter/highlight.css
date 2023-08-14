@@ -1,0 +1,122 @@
+.card {
+  margin: 0vw auto;
+  width: 100%;
+  border-radius: 5px;
+  height: auto;
+  background: linear-gradient(rgb(235, 231, 231), rgb(219, 149, 26));
+}
+
+.highlightedTxt {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5vw;
+  width: 41vw;
+  padding: 2vw;
+  font-size: 2.6vw;
+  font-family: sans-serif;
+  text-align: left;
+  border-radius: 2vw;
+  min-height: 23px;
+  height: auto;
+  font-weight: bold;
+}
+
+.margin-top-zero {
+  margin-top: -3vw;
+  margin-bottom: 35vw;
+  padding-top: 5vw;
+}
+
+.btn {
+  padding: 5px;
+  width: 47.5vw;
+  font-size: 4vw;
+  border-radius: 2vw;
+}
+
+.img-holder {
+  width: 44.3vw;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  border-top-color: #d6d8db;
+  border: 2px solid #d6d8db;
+}
+
+.ZooText {
+  background-color: white;
+  color: black;
+  margin-bottom: 5vw;
+  height: 21px;
+  width: 41vw;
+  padding: 2vw;
+  font-size: 2.5vw;
+  font-family: sans-serif;
+  text-align: left;
+  border-radius: 2vw;
+  padding-bottom: 28vw;
+  margin-top: -3vw;
+  padding-top: 5vw;
+  padding-bottom: 28vw;
+}
+
+.highlightText {
+  background-color: white;
+  color: black;
+  margin-bottom: 5vw;
+  height: 21px;
+  width: 41vw;
+  padding: 2vw;
+  font-size: 2.5vw;
+  font-family: sans-serif;
+  text-align: left;
+  border-radius: 2vw;
+  padding-bottom: 28vw;
+  margin-top: -3vw;
+  padding-top: 5vw;
+  padding-bottom: 28vw;
+}
+
+.btn {
+  padding: 5px;
+  width: 35vw;
+  font-size: 3vw;
+  border-radius: 2vw;
+  font-weight: bold;
+  background-color: dimgrey;
+  color: white;
+}
+
+.btn:hover {
+  color: #f07b0d;
+  background-color: rgb(255, 255, 255);
+}
+.btn:active {
+  color: #0fd309;
+  background-color: rgb(240, 123, 13);
+}
+
+.btn:disabled {
+  background: #fff;
+  color: #ccc;
+  cursor: no-drop;
+}
+.closeCircle {
+  color: #333;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 10px;
+}
+.highlightedBoxes {
+  background-color: #fff823;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5vw;
+  width: 41vw;
+  padding: 2vw;
+  font-size: 2.6vw;
+  font-family: sans-serif;
+  text-align: left;
+  border-radius: 2vw;
+  min-height: 5px;
+  height: auto;
+  font-weight: bold;
+}

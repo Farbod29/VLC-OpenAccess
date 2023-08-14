@@ -1,0 +1,11 @@
+"8:42:44 pm" GET http://localhost:3009/api/v1/witApi/hi localhost
+"8:42:54 pm" GET http://localhost:3009/api/v1/witApi/Yes%20fine localhost
+"8:43:11 pm" GET http://localhost:3009/api/v1/witApi/What%20is%20Fake%20news%20? localhost
+"8:46:42 pm" GET http://localhost:3009/api/v1/witApi/hi localhost
+"8:46:56 pm" GET http://localhost:3009/api/v1/witApi/what%20is%20fake localhost
+"8:47:29 pm" GET http://localhost:3009/api/v1/witApi/what%20is%20fake%20? localhost
+"8:56:24 pm" GET http://localhost:3009/api/v1/witApi/what%20is%20fake%20? localhost
+"9:07:03 pm" GET http://localhost:3009/api/v1/witApi/what%20is%20fake%20? localhost
+"9:10:46 pm" GET http://localhost:3009/api/v1/witApi/sosis localhost
+"9:27:21 pm" GET http://localhost:3009/api/v1/witApi/what%20is%20fake localhost
+"9:38:00 pm" GET http://localhost:3009/api/v1/witApi/what%20is%20fake localhost
