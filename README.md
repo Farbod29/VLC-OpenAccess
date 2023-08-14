@@ -79,3 +79,9 @@ killall node
 ## To DO
 
 chat history need refresh after right click !
+
+## Acknowledgement 
+
+This repository belongs to the Courage project, in which Farbod Aprin actively participated since 2010. He developed it to fulfill the objectives of his thesis and as a foundation for analysis. The "Courage" initiative involves European scholars creating an educational environment to empower adolescents with skills to effectively address discrimination and harmful social media content, encompassing fake news, conspiracy theories, hate speech, and cyber-harassment. The initiative prioritizes fostering self-protection, resilience, and critical thinking to effectively counter these challenges. As an integral part of the project, the Virtual Learning Companion (VLC), designed by Farbod Aprin under the supervision of the RIAS institute, serves as a versatile chrome plugin and adaptable chatbot aimed at mitigating harmful content. The VLC incorporates innovative scenarios, gamification strategies, and counter-narratives to amplify users' awareness and engagement. By integrating "Reverse Image Search," the VLC effectively tackles misinformation by providing diverse contextual data derived from manipulated images. Distinguished from AI techniques, this approach revolves around human-centric methodologies, highlighting the importance of recognizing fake news through educational means. The study delves into the Intelligent Tutoring System tradition, delving into experimentation with recommendations offered by the VLC to learners, based on data collected from school trials. For more information, visit couragecompanion.eu.
+
+
